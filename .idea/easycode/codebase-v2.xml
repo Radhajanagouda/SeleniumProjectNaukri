@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="com.obiscr.chatgpt.settings.EasyCodeState">
+    <option name="projectFiles" value="$PROJECT_DIR$/src/main/java/pojoFiles/Users.java;C:/Automation/NaukriProfileUpdating/src/main/java/pojoFiles/UsersAccountsWrapper.java;C:/Automation/NaukriProfileUpdating/src/test/java/com/rj/cucumber/RJSteps/Initializer.java;C:/Automation/NaukriProfileUpdating/src/test/java/com/rj/cucumber/RJSteps/Runner.java;C:/Automation/NaukriProfileUpdating/src/test/java/com/rj/cucumber/RJSteps/StepDefs.java;C:/Automation/NaukriProfileUpdating/src/test/java/pageObjects/LoginPage.java;C:/Automation/NaukriProfileUpdating/src/test/java/Utils/CommonUtils.java;C:/Automation/NaukriProfileUpdating/src/test/java/Utils/WebElementWrapper.java;C:/Automation/NaukriProfileUpdating/src/test/java/UpdateProfile.java;C:/Automation/NaukriProfileUpdating/src/test/resources/jsonData/credentialDets.json" />
+  </component>
+</project>
