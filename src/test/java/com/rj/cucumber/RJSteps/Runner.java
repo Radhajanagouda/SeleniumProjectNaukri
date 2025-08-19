@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/naukriUploads.feature",
         glue = {"com.rj.cucumber.RJSteps", "com.rj.cucumber.RJSteps.BaseTest.java"},
         plugin = {
-                "pretty","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+
         },
         tags = "@smoke"
 )

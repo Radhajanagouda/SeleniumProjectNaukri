@@ -9,8 +9,8 @@ Feature: Validate the naukri profiles
     |UserName|
     |radha.janagouda@gmail.com|
 
-  @sSmoke
-  Scenario Outline: Validate the naukri features
+  @smoke
+  Scenario Outline: Validate the naukri features2
     Given Login to naukri with below user "<UserName>"
     Then landing page is got as "nsf"
     Then Logout the page
