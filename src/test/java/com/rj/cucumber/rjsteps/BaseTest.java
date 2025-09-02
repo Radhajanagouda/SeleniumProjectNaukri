@@ -1,4 +1,4 @@
-package com.rj.cucumber.RJSteps;
+package com.rj.cucumber.rjsteps;
 
 
 import Utils.DriverFactory;
@@ -7,9 +7,6 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-
-
-import java.sql.Driver;
 
 public class BaseTest {
 //    ThreadLocal<ExtentTest> exTest = new ThreadLocal<>();
@@ -25,8 +22,10 @@ public class BaseTest {
         ExtentReports extentreports = new ExtentReports();
         ExtentSparkReporter sparkReport = new ExtentSparkReporter("report.html");
         extentreports.attachReporter(sparkReport);
+        extentreports.createTest("ABC","seethis");
+        //start
+        //
         extentreports.flush();
-
         System.out.println("Scenario name:" +  scenario.getName());
         DriverFactory.tearDown();
     }
