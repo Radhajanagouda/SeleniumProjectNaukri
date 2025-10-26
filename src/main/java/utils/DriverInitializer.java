@@ -1,21 +1,20 @@
-package Utils;
+package utils;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.github.bonigarcia.wdm.config.WebDriverManagerException;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
 
 
-import java.nio.file.Path;
 import java.time.Duration;
 
-public class DriverFactory {
+public final class DriverInitializer {
+
+    private DriverInitializer(){
+
+    }
     public static WebDriver driver;
     public static void initializeDriver() {
         String browser = ConfigReader.getProperty("browser");
@@ -23,7 +22,6 @@ public class DriverFactory {
     }
 
     public static WebDriver initialiseBrowser(String browserName) {
-
         try {
             switch (browserName.toLowerCase()) {
                 case "firefox":

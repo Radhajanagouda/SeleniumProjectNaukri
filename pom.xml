@@ -9,19 +9,23 @@
 
     <name>NaukriProfileUpdating</name>
     <url>http://maven.apache.org</url>
-<!--    <build>-->
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-surefire-plugin</artifactId>-->
-<!--                <version>2.22.0</version>-->
-<!--                <configuration>-->
-<!--                    <parallel>methods</parallel>-->
-<!--                    <useUnlimitedThreads>true</useUnlimitedThreads>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--        </plugins>-->
-<!--    </build>-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.0</version>
+                <configuration>
+                    <parallel>methods</parallel>
+                    <threadCount>2</threadCount>
+                    <!--                <rerunFailingTestsCount>2</rerunFailingTestsCount>-->
+                    <includes>
+                        <include>**/*Runner.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <repositories>
         <repository>
@@ -37,12 +41,12 @@
     </properties>
 
     <dependencies>
-            <dependency>
-              <groupId>junit</groupId>
-              <artifactId>junit</artifactId>
-              <version>4.13.2</version>
-<!--              <scope>test</scope>-->
-            </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <!--              <scope>test</scope>-->
+        </dependency>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -61,7 +65,7 @@
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
             <version>7.21.1</version>
-<!--            <scope>test</scope>-->
+            <!--            <scope>test</scope>-->
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
@@ -88,28 +92,28 @@
             <version>2.0.9</version> <!-- Use latest version -->
         </dependency>
         <!-- JUnit Jupiter API: Provides annotations and assertions -->
-<!--        <dependency>-->
-<!--            <groupId>org.junit.jupiter</groupId>-->
-<!--            <artifactId>junit-jupiter-api</artifactId>-->
-<!--            <version>5.9.1</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.junit.jupiter</groupId>-->
+        <!--            <artifactId>junit-jupiter-api</artifactId>-->
+        <!--            <version>5.9.1</version>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
 
-<!--        &lt;!&ndash; JUnit Jupiter Engine: Required to run tests &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.junit.jupiter</groupId>-->
-<!--            <artifactId>junit-jupiter-engine</artifactId>-->
-<!--            <version>5.9.1</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
+        <!--        &lt;!&ndash; JUnit Jupiter Engine: Required to run tests &ndash;&gt;-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.junit.jupiter</groupId>-->
+        <!--            <artifactId>junit-jupiter-engine</artifactId>-->
+        <!--            <version>5.9.1</version>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
 
-<!--        &lt;!&ndash; Optional: Parameterized tests &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.junit.jupiter</groupId>-->
-<!--            <artifactId>junit-jupiter-params</artifactId>-->
-<!--            <version>5.9.1</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
+        <!--        &lt;!&ndash; Optional: Parameterized tests &ndash;&gt;-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.junit.jupiter</groupId>-->
+        <!--            <artifactId>junit-jupiter-params</artifactId>-->
+        <!--            <version>5.9.1</version>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
@@ -120,11 +124,11 @@
             <artifactId>webdrivermanager</artifactId>
             <version>6.1.1</version> <!-- Use latest version -->
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>tech.grasshopper</groupId>-->
-<!--            <artifactId>extentreports-cucumber7-adapter</artifactId>-->
-<!--            <version>1.14.0</version> &lt;!&ndash; or latest &ndash;&gt;-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>tech.grasshopper</groupId>-->
+        <!--            <artifactId>extentreports-cucumber7-adapter</artifactId>-->
+        <!--            <version>1.14.0</version> &lt;!&ndash; or latest &ndash;&gt;-->
+        <!--        </dependency>-->
         <!-- https://mvnrepository.com/artifact/com.vimalselvam/cucumber-extentsreport -->
 
         <dependency>

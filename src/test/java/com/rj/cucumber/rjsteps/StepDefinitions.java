@@ -1,11 +1,11 @@
 package com.rj.cucumber.rjsteps;
 
-import Utils.DriverManager;
+import utils.DriverManager;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebDriver;
 import pageObjects.LoginPage;
-public class stepDefinitions {
+public class StepDefinitions {
     WebDriver driver = DriverManager.getDriver();
     LoginPage lp = new LoginPage(driver);
 
@@ -21,5 +21,10 @@ public class stepDefinitions {
     @Then("Logout the page")
     public void logoutThePage() {
         lp.validateLogoutAction();
+    }
+
+    @Given("Login to other website of google {string}")
+    public void loginToOtherWebsiteOfGoogle(String goole) {
+        driver.get(goole);
     }
 }

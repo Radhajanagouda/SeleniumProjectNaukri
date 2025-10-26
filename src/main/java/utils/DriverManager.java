@@ -1,11 +1,15 @@
-package Utils;
+package utils;
 
 import org.openqa.selenium.WebDriver;
 
-public class DriverManager {
+public final class DriverManager {
 
     // Thread-local variable to hold WebDriver per thread
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+
+    private DriverManager(){
+
+    }
 
     // Getter for WebDriver
     public static WebDriver getDriver() {

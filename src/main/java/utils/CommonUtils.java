@@ -1,4 +1,4 @@
-package Utils;
+package utils;
 
 import com.google.gson.Gson;
 import org.openqa.selenium.WebDriver;
@@ -8,7 +8,6 @@ import pojoFiles.UsersAccountsWrapper;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.sql.Driver;
 import java.util.List;
 
 public class CommonUtils {
