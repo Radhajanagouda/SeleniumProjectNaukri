@@ -5,6 +5,7 @@ Feature: Validate the naukri profiles
     Given Login to other website of google "www.google.com"
       |www.google.com|new files|
       |www.facebook.com|older files|
+      |www.facebook.com|newer files|
 
 
   @smoke
